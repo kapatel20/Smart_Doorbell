@@ -66,7 +66,7 @@ for layer in model.layers[-20:]:
     if not isinstance(layer, layers.BatchNormalization):
         layer.trainable = True
 
-optimizer = tf.keras.optimizers.Adam(learning_rate=1e-4)
+optimizer = tf.keras.optimizers.Adam()
 model.compile(
     optimizer=optimizer, loss="categorical_crossentropy", metrics=["accuracy"]
 )
